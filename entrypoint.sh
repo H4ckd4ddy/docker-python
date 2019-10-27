@@ -2,7 +2,7 @@
 
 mkdir -p /app
 
-if [ -z "$GIT_REPO" ]
+if [ ! -z "$GIT_REPO" ]
 then
 	git pull "$GIT_REPO" /app
 fi
@@ -12,7 +12,7 @@ then
 	pip3 install -r /app/requirements.txt
 fi
 
-if [ -z "$APP_ENTRYPOINT" ]
+if [ ! -z "$APP_ENTRYPOINT" ]
 then
 	cd /app
 	python3 -u "$APP_ENTRYPOINT"
