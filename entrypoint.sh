@@ -4,7 +4,7 @@ mkdir -p /app
 
 if [ ! -z "$GIT_REPO" ]
 then
-	git pull "$GIT_REPO" /app
+	git clone "$GIT_REPO" /app
 fi
 
 if [ -f "/app/requirements.txt" ]
