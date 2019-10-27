@@ -5,7 +5,7 @@ Simple Docker image to host python3 service, with dependencies installation
 ### With a Git project
 ```
 my_project:
-    image: h4ckd4ddy/python
+    image: hackdaddy/python
     restart: always
     environment:
       - GIT_REPO=https://github.com/my_name/my_repo.git
@@ -15,7 +15,7 @@ my_project:
 ### With a local project
 ```
 my_project:
-    image: h4ckd4ddy/python
+    image: hackdaddy/python
     restart: always
     volumes:
       - /path/to/my/app:/app
