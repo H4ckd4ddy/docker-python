@@ -1,8 +1,12 @@
 #!/bin/bash
 
 mkdir -p /app
+cd /app
 
-if [ ! -z "$GIT_REPO" ]
+if [ -d "/app/.git" ]
+then
+	git pull
+elif [ ! -z "$GIT_REPO" ]
 then
 	git clone "$GIT_REPO" /app
 fi
@@ -14,7 +18,6 @@ fi
 
 if [ ! -z "$APP_ENTRYPOINT" ]
 then
-	cd /app
 	python3 -u "$APP_ENTRYPOINT"
 else
 	echo "Please specify APP_ENTRYPOINT"
