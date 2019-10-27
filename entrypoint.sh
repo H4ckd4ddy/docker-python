@@ -8,6 +8,7 @@ then
 fi
 
 if [ -f "/app/requirements.txt" ]
+then
 	pip3 install -r /app/requirements.txt
 fi
 
